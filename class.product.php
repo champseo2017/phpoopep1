@@ -25,8 +25,16 @@ class product
     }
 
     public function info() {
-        echo $this->id . ":" .$this->name;
+        $info = "";
+        foreach (func_get_args() as $arg){
+            switch ($arg){
+                case 'id':$info .= $this->id; break;
+                case 'name': $info .= $this->name; break;
+            }
+        }
+
+        echo $info;
     }
-}
+}ิ
 
 
