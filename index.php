@@ -1,6 +1,6 @@
 <?php
 include 'class.product.php';
-$s1 = new Product();
-$s1->setId(1);
-$s1->setName("TV");
-$s1->info("id", "name");
+$product = new Product();
+$product->id = 1;
+$product->name = "TV";
+echo $product->info(); 
