@@ -23,6 +23,10 @@ class product
     { // setter method
         $this->name = $name;
     }
+
+    public function info() {
+        echo $this->id . ":" .$this->name;
+    }
 }
 
 
