@@ -1,20 +1,14 @@
 <?php
 class product
 {
-    private $data = array();
-    public function __set($name, $value) {
-        $this->data[$name] = $value;
-    }
-    public function __get($name){
-        return $this->data[$name];
-    }
+     // $private $id;
+     // $private $name;
+     public function __construct($id, $name){
+        $this->id = $id;
+        $this->name = $name;
+     }
 
-    public function info() {
-        $info = "";
-        foreach($this->data as $data){
-            $info .= $data . " ";
-        }
-
-        return $info;
-    }
+     public function info() {
+         return $this->id. ":". $this->name;
+     }
 }
