@@ -1,6 +1,6 @@
 <?php
 class Radio extends Product {
-    public final function info(){
-        echo "Radio:". $this->getId() . ":" . $this->getName();
+    public function report() {
+        echo "Radio:" . $this->getId() . ":" . $this->getName() . "<br>";
     }
 }

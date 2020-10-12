@@ -1,5 +1,5 @@
 <?php
-class Product {
+abstract class Product {
     private static $nextID = 1;
     private $id;
     private $name;
@@ -24,4 +24,6 @@ class Product {
     public function info() {
         return $this->id . ":" . $this->name;
     }
+
+    abstract function report();
 }
