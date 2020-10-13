@@ -1,9 +1,13 @@
 <?php
 include "class.product.php";
-$object = new class {
-    public function hello($message){
-        return "Hello $message";
-    }
-};
+include "class.radio.php";
+include "class.computer.php";
 
-echo $object->hello('PHP7');
+$products = array();
+$products[] = new Radio("Tanin");
+$products[] = new Computer("Acer");
+$products[] = new Computer("IBM");
+
+foreach($products as $p) {
+    $p->report();
+}
