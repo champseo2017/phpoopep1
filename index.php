@@ -1,12 +1,14 @@
 <?php
-include "class.product.php";
-include "class.radio.php";
-include "tools/class.radio.php";
+spl_autoload_register(function($class){
+    include $class.'.php';
+});
+
+use tools\radio as R;
 
 $products = array();
-$products[] = new Radio("Tanin");
-$products[] = new tools\Radio();
+$products[] = new Radio('test');
+$products[] = new R();
 
-foreach($products as $p) {
+foreach($products as $p){
     $p->report();
 }
