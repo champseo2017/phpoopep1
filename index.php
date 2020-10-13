@@ -1,12 +1,11 @@
 <?php
 include "class.product.php";
 include "class.radio.php";
-include "class.computer.php";
+include "tools/class.radio.php";
 
 $products = array();
 $products[] = new Radio("Tanin");
-$products[] = new Computer("Acer");
-$products[] = new Computer("IBM");
+$products[] = new tools\Radio();
 
 foreach($products as $p) {
     $p->report();
